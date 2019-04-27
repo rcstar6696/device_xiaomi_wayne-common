@@ -23,7 +23,8 @@
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-aosip
 
 # Inherit from sdm660-common
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
