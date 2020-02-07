@@ -37,5 +37,9 @@ TARGET_KERNEL_CONFIG := wayne_defconfig
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-11-01
 
+# Partitions
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
+BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
+
 # Inherit the proprietary files
 -include vendor/xiaomi/wayne-common/BoardConfigVendor.mk
