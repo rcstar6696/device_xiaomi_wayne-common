@@ -21,3 +21,11 @@ export DEVICE_COMMON=sdm660-common
 export DEVICE_SPECIFIED_COMMON_DEVICE="jasmine_sprout wayne"
 
 ./../../$VENDOR/$DEVICE_COMMON/extract-files.sh "$@"
+
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+
+AOSIP_ROOT="$MY_DIR"/../../..
+DEVICE_SPECIFIED_COMMON_BLOB_ROOT="$AOSIP_ROOT"/vendor/"$VENDOR"/"$DEVICE_SPECIFIED_COMMON"/proprietary
+
+patchelf --add-needed libcamera_sdm660_shim.so "$DEVICE_SPECIFIED_COMMON_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
