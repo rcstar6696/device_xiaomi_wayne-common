@@ -31,7 +31,7 @@ WAYNE_PATH := device/xiaomi/wayne-common
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 400
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(WAYNE_PATH)/manifest.xml
